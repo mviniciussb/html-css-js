@@ -26,6 +26,10 @@ body {
   height: 100vh;
 }
 
+/* .screenOne{
+  display: block;
+} */
+
 main {
   border-radius: 0.6rem;
   background: #fff;
@@ -74,8 +78,8 @@ form input{
 
 }
 
-form button{
-    font-family: "Montserrat", sans-serif;
+button{
+    font-family: "DM Sans";
     font-weight: 700;
     color: #FFF;
 
@@ -88,7 +92,28 @@ form button{
     cursor: pointer;
 }
 
-form button:hover{
+button:hover{
   background: #6464b3;
-  transition: 1.5s;
+  transition: background .5s;
+}
+
+
+/* Screen2 */
+
+.screenTwo{
+  display: none;
+}
+
+button{
+  border-radius: .4rem;
+
+  margin-top: 3.3rem;
+}
+
+h2{
+  color: #34355B;
+  font-family: "DM Sans";
+  font-size: 24px;
+  line-height: 150%;
+  font-weight: 400;
 }

@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Jogo da adivinhação</title>
 </head>
+
 <body>
     <main>
-        <h1>Jogo da Adivinhação</h1>
-        <p>Adivinhe um número entre 0 e 10</p>
+        <div class="screenOne">
+            <h1>Jogo da Adivinhação</h1>
+            <p>Adivinhe um número entre 0 e 10</p>
+            <form action="main.js" method="get">
+                <input type="text" name="inputNumber" id="inputNumber" required>
+                <button>Tentar</button>
+            </form>
+        </div>
 
-        <form action="main.js" method="get">
-            <input type="text" name="inputNumber" id="inputNumber" required >
-            <button>Tentar</button>
-        </form>
+        <div class="screenTwo">
+            <h2>Acertou em X tentativas!</h2>
+
+                <button>Jogar novamente</button>
+        </div>
     </main>
     <script src="main.js"></script>
 </body>
+
 </html>
