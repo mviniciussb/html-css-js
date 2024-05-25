@@ -3,6 +3,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat&display=swap');
 
+.hide{
+  display: none;
+}
+ 
 
 
 :root {
@@ -100,17 +104,13 @@ button:hover{
 
 /* Screen2 */
 
-.screenTwo{
-  display: none;
-}
-
-button{
+.screenTwo button{
   border-radius: .4rem;
 
   margin-top: 3.3rem;
 }
 
-h2{
+.screenTwo h2{
   color: #34355B;
   font-family: "DM Sans";
   font-size: 24px;
