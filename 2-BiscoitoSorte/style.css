@@ -95,7 +95,9 @@ button{
     cursor: pointer;
 }
 
+/* Animações */
 
+/* Animação de vibração do biscoito */
 @keyframes vibrate {
       20% {
                 transform: translate(-2px, 2px);
@@ -115,3 +117,13 @@ button{
       }
     }
   
+
+    @keyframes appear{
+        from{
+            position: -50%;
+        }
+
+        to{
+            position: 100%;
+        }
+    }
