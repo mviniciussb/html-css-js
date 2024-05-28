@@ -60,7 +60,7 @@ main h1{
 #screenOne:hover img{
     cursor: pointer;
     animation-name: vibrate;
-    animation-duration: 9ms;
+    animation-duration: 200ms;
     animation-iteration-count: infinite;
     
 }
