@@ -24,6 +24,9 @@ body{
     background: linear-gradient(45deg, #190361 0%, #B0F 100%);
     background-repeat: no-repeat;
     height: 100vh;
+
+    animation: gradient 10s ease infinite;
+    background-size: 200% 200%;
 }
 
 .hide{
@@ -72,6 +75,9 @@ main h1{
 
     padding: 1rem;
     margin-top: 1.7rem;
+
+    animation-name: appear;
+    animation-duration: 3s;
 }
 
 #screenTwo img{
@@ -117,13 +123,24 @@ button{
       }
     }
   
-
+/* Aparecer frase */
     @keyframes appear{
-        from{
-            position: -50%;
-        }
-
-        to{
-            position: 100%;
+        0%{
+            transform: translateY(150%) scale(10%) translateX(20%);
+            
         }
     }
+
+ /* Animacao do backgroud */
+
+ @keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

@@ -26,7 +26,6 @@ function luckyPhrase(){
     toggleScreen()
 
     phrase = phrasesList[randomNumberPhrase]
-    
 
     screenTwo.querySelector("p").innerText = phrase
 }
