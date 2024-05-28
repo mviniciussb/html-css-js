@@ -2,6 +2,13 @@ let randomNumber = Math.round(Math.random() * 10)
 let attempts = 1
 const screenOne = document.querySelector(".screenOne")
 const screenTwo = document.querySelector(".screenTwo")
+const btnTry = document.querySelector("#btnTry")
+const btnReset = document.querySelector("#btnReset")
+
+
+btnTry.addEventListener("click", handTryClick)
+btnReset.addEventListener("click", reset)
+
 
 function handTryClick(event) {
     event.preventDefault()
@@ -19,15 +26,12 @@ function handTryClick(event) {
     attempts++
 }
 
-const btnTry = document.querySelector("#btnTry")
-const btnReset = document.querySelector("#btnReset")
-
-
-btnTry.addEventListener("click", handTryClick)
-btnReset.addEventListener("click", function () { 
+function reset () { 
     screenOne.classList.remove("hide")
     screenTwo.classList.add("hide")
 
     attempts = 1
     randomNumber = Math.round(Math.random() * 10)
-})
+}
+
+
