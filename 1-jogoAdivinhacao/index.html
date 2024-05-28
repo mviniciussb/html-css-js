@@ -10,20 +10,21 @@
 
 <body>
     <main>
-        <div class="screenOne">
+        <div class="div1">
             <h1>Jogo da Adivinhação</h1>
-            <p>Adivinhe um número entre 0 e 10</p>
+            <p>Adivinhe o número entre 0 e 10</p>
+
             <form>
-                <input type="text" id="inputNumber">
-                <button id="btnTry">Tentar</button>
+                <input id="inputButton" type="number">
+                <input id="inputSubmit" type="submit" value="Tentar">
             </form>
         </div>
 
-        <div class="screenTwo hide">
-            <h2>Acertou em X tentativas!</h2>
-
-            <button id="btnReset">Jogar novamente</button>
+        <div class="div2 hide">
+            <h1>Acertou em 3 tentativas!</h1>
+            <button id="tryAgain">Jogar novamente</button>
         </div>
+
     </main>
     <script src="main.js"></script>
 </body>
