@@ -112,7 +112,6 @@ button{
                 transform: translate(-2px, -2px);
       }
       60% {
-        -webkit-transform: translate(2px, 2px);
                 transform: translate(2px, 2px);
       }
       80% {
@@ -126,7 +125,7 @@ button{
 /* Aparecer frase */
     @keyframes appear{
         0%{
-            transform: translateY(150%) scale(10%) translateX(20%);
+            transform: translateY(150%) scale(.1);
             
         }
     }

@@ -20,6 +20,11 @@ let phrase
 // Eventos
 cookieClick.addEventListener("click", luckyPhrase)
 openNewCookie.addEventListener("click", openNewCokie)
+document.addEventListener("keydown", function(key){
+    if(key.key == "Enter" && screenOne.classList.contains("hide")){
+        openNewCokie()
+    }
+})
 
 // Funções
 function luckyPhrase(){
