@@ -54,6 +54,14 @@ main h1{
     margin: 1.4rem 0 2.6rem;
 }
 
+#screenOne:hover img{
+    cursor: pointer;
+    animation-name: vibrate;
+    animation-duration: 9ms;
+    animation-iteration-count: infinite;
+    
+}
+
 #screenTwo p{
     background: #E4EDF1;
     box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.50);
@@ -83,4 +91,27 @@ button{
     color: white;
     font-weight: 700;
     border: none;
+
+    cursor: pointer;
 }
+
+
+@keyframes vibrate {
+      20% {
+                transform: translate(-2px, 2px);
+      }
+      40% {
+                transform: translate(-2px, -2px);
+      }
+      60% {
+        -webkit-transform: translate(2px, 2px);
+                transform: translate(2px, 2px);
+      }
+      80% {
+                transform: translate(2px, -2px);
+      }
+      100% {
+                transform: translate(0);
+      }
+    }
+  
