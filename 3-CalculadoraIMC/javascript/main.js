@@ -4,9 +4,11 @@ const formButton = document.querySelector("#formButton")
 let weight = document.querySelector("#weight")
 let height = document.querySelector("#height")
 
+
 // Events
 formButton.addEventListener("click", handleForm)
 modal.buttonClose.addEventListener("click", closePopUp)
+
 
 // Funtions
 function handleForm(event) {

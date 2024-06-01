@@ -17,7 +17,7 @@ function closePopUp() {
 document.addEventListener("keydown", handleKeyDown)
 
 function handleKeyDown (event) {
-    if (event.key == "Escape") {
+    if (event.key === "Escape") {
         modal.close()
     }
 }
