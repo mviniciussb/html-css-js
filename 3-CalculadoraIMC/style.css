@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-:root{
+:root {
     font-size: 62.5%;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,18 +12,19 @@
     font-family: "Roboto", sans-serif;
 }
 
-body{
+body {
     display: grid;
     place-content: center;
     height: 100vh;
 
     background: #040924;
     font-size: 1.6rem;
-    
+
 }
 
-main, .modal-card{
-    
+main,
+.modal-card {
+
     width: min(90vw, 42.8rem);
 
     background: #FFF;
@@ -33,7 +34,7 @@ main, .modal-card{
     padding: 4.8rem 6.4rem 6.4rem;
 }
 
-h1{
+h1 {
     color: #0C3440;
     font-size: 3.2rem;
     line-height: 4rem;
@@ -41,20 +42,20 @@ h1{
 
 /* form */
 
-form{
+form {
     margin-top: 3.2rem;
 }
 
-.input-wrapper{
+.input-wrapper {
     display: flex;
     flex-direction: column;
 }
 
-.input-wrapper:first-child{
+.input-wrapper:first-child {
     margin-bottom: 1.6rem;
 }
 
-.input-wrapper input{
+.input-wrapper input {
     padding: 1.6rem;
 
     width: 100%;
@@ -64,11 +65,11 @@ form{
     background: #DCE2E9;
 }
 
-.input-wrapper input:focus{
+.input-wrapper input:focus {
     outline: .2rem solid #02799D;
 }
 
-.input-wrapper label{
+.input-wrapper label {
     font-size: 1.4rem;
     color: #00453A;
     line-height: 1.8rem;
@@ -76,7 +77,7 @@ form{
     margin-bottom: .8rem;
 }
 
-form button{
+form button {
     display: flex;
     align-items: center;
     gap: .8rem;
@@ -97,11 +98,11 @@ form button{
     transition: background 1s;
 }
 
-form button:focus{
-    outline: .2rem solid #0C3440;   
+form button:focus {
+    outline: .2rem solid #0C3440;
 }
 
-form button:hover{
+form button:hover {
     background-color: #015068;
     cursor: pointer;
 }
@@ -109,7 +110,7 @@ form button:hover{
 
 /* Modal */
 
-.modal-wrapper{
+.modal-wrapper {
     display: grid;
     place-content: center;
 
@@ -122,13 +123,13 @@ form button:hover{
     visibility: hidden;
 }
 
-.modal-card{
+.modal-card {
     text-align: center;
     width: auto;
     position: relative;
 }
 
-.buttonClose{
+.buttonClose {
     border: none;
     background: none;
     position: absolute;
@@ -140,20 +141,20 @@ form button:hover{
     transition: .3s;
 }
 
-.buttonClose:hover{
+.buttonClose:hover {
     transform: scale(1.1);
 }
 
-.openPopUp{
+.openPopUp {
     opacity: 1;
     visibility: visible;
 }
 
 /* Mensagem de erro */
 
-.error{
+.error {
     background: #F03E3E;
-    
+
     color: #FFF;
     font-weight: 700;
     line-height: 2rem;
@@ -171,14 +172,14 @@ form button:hover{
 
     transform: translateY(-100%);
     transition: transform .5s;
-    
-    
+
+
 }
 
-.hide{
+.hide {
     opacity: 1;
     visibility: visible;
 
     transform: translateY(0);
-    
+
 }
