@@ -128,7 +128,7 @@ form button:hover{
     position: relative;
 }
 
-.close{
+.buttonClose{
     border: none;
     background: none;
     position: absolute;
@@ -140,7 +140,7 @@ form button:hover{
     transition: .3s;
 }
 
-.close:hover{
+.buttonClose:hover{
     transform: scale(1.1);
 }
 
