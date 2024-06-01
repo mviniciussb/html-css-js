@@ -5,3 +5,4 @@ export function imCalc(weight, height) {
 export function notNumber(value) {
     return isNaN(value) || value == ""
 }
+

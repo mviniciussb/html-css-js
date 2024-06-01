@@ -1,5 +1,5 @@
 import { modal, closePopUp } from "../javascript/modal.js"
-import { errorModule } from "../javascript/alert-error.js"
+import { errorModule, inputCloseError } from "../javascript/alert-error.js"
 import { imCalc, notNumber } from "../javascript/utils.js"
 
 const formButton = document.querySelector("#formButton")
@@ -23,14 +23,16 @@ function handleForm(event) {
         errorModule.open()
         return
     }
-    errorModule.close()
     const imcResult = imCalc(inputWeigth, inputHeigth)
     messageImcCalc(imcResult)
 }
 
-function messageImcCalc(result){
+function messageImcCalc(result) {
     const message = `Seu IMC é de ${result}`
 
     modal.message.innerText = message
     modal.open()
 }
+
+document.addEventListener("input", inputCloseError)
+

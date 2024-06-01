@@ -8,3 +8,8 @@ export const errorModule = {
     }
 }
 
+export function inputCloseError() {
+    if (weight || height != "") {
+        errorModule.close()
+    }
+}
