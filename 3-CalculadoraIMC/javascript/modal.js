@@ -10,7 +10,7 @@ export const modal = {
     }
 }
 
-function closePopUp() {
+export function closePopUp() {
     modal.close()
 }
 

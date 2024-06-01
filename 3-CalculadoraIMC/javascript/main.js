@@ -1,4 +1,7 @@
-import { modal } from "../javascript/modal.js"
+import { modal, closePopUp } from "../javascript/modal.js"
+import {errorModule} from "../javascript/alert-error.js"
+import {imCalc, notNumber} from "../javascript/utils.js"
+
 // Variables
 const formButton = document.querySelector("#formButton")
 let weight = document.querySelector("#weight")
@@ -17,13 +20,15 @@ function handleForm(event) {
     const inputWeigth = weight.value
     const inputHeigth = height.value
 
-    const IMC = imCalc(inputWeigth, inputHeigth)
+    const showAlertError = notNumber(inputWeigth) || notNumber(inputHeigth)
 
-    modal.message.innerText = `Seu IMC é de ${IMC}`
-    modal.open()
+    if (showAlertError) {
+        errorModule.open()
+        return
+    }
+        errorModule.close()
+        const IMC = imCalc(inputWeigth, inputHeigth)
+        modal.message.innerText = `Seu IMC é de ${IMC}`
+        modal.open()
 
-}
-
-function imCalc(weight, height) {
-    return (weight / (height / 100) ** 2).toFixed(2);
 }
