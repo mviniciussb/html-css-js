@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Temporizador estilo pomodoro">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="shortcut icon" href="assets/ph_pause-circle.svg" type="image/x-svg">
+    <script src="scripts/main.js" type="module" defer></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <title>Focus Timer | Pomodoro</title>
+</head>
+
+<body>
+
+    <button class="lightAndDarkMode">
+        <i class="ph-bold ph-sun"></i>
+        <i class="ph-bold ph-moon hide"></i>
+    </button>
+
+    <main>
+
+        <div id="timer" class="flex">
+            <span class="minutes">25</span>
+            <span class="separation-time">:</span>
+            <span class="seconds">00</span>
+        </div>
+        
+
+        <div class="controlsPlay flex">
+            <button class="ph ph-play-circle secondary-color"></button>
+            <button class="ph ph-pause-circle hide secondary-color"></button>
+            <button class="ph ph-timer"></button>
+            <button class="ph ph-stop-circle hide"></button>
+            <button class="ph ph-speaker-none"></button>
+            <button class="ph ph-speaker-high hide secondary-color"></button>
+        </div>
+
+    </main>
+</body>
+
+</html>
