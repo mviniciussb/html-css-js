@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-:root{
+:root {
     font-size: 62.5%;
 
     --bg-color-dark-n-tt-color-light: #121214;
@@ -9,14 +9,14 @@
     --secondary-color: #42D3FF;
 }
 
-*{
+* {
     box-sizing: border-box;
 
     padding: 0;
     margin: 0;
 }
 
-body{
+body {
     display: grid;
     place-content: center;
     position: relative;
@@ -28,9 +28,9 @@ body{
     color: var(--tt-color-n-bg-light);
 }
 
-.lightAndDarkMode{
+.lightAndDarkMode {
     position: absolute;
-    
+
     border: none;
     background: none;
 
@@ -43,31 +43,31 @@ body{
     transition: .5s;
 }
 
-.lightAndDarkMode:hover{
+.lightAndDarkMode:hover {
     transform: scale(1.1);
     cursor: pointer;
 }
 
-.hide{
+.hide {
     display: none;
 }
 
-.flex{
+.flex {
     display: flex;
 }
 
 
-main{
+main {
     display: grid;
     place-items: center;
 }
 
-#timer{
+#timer {
     font-size: 9.2rem;
     font-weight: 700;
 }
 
-.controlsPlay{
+.controlsPlay {
     display: flex;
     gap: 1.6rem;
 
@@ -78,7 +78,7 @@ main{
     margin-top: 1.6rem;
 }
 
-.controlsPlay button{
+.controlsPlay button {
     font-size: 6.4rem;
     color: var(--tt-color-n-bg-light);
 
@@ -88,11 +88,11 @@ main{
     transition: .7s;
 }
 
-.controlsPlay button:hover{
+.controlsPlay button:hover {
     cursor: pointer;
     transform: scale(1.06);
 }
 
-.controlsPlay button.secondary-color{
+.controlsPlay button.secondary-color {
     color: var(--secondary-color);
 }
