@@ -3,10 +3,12 @@
 :root {
     font-size: 62.5%;
 
-    --bg-color-dark-n-tt-color-light: #121214;
+    --bg-color-dark: #121214;
     --bg-color-controls-dark-n-light: #242424;
-    --tt-color-n-bg-light: #F8F8FC;
     --secondary-color: #42D3FF;
+    --tt-color-dark: #F8F8FC;
+    --modes-dark: #F8F8FC;
+    --controls-color: #F8F8FC;
 }
 
 * {
@@ -22,13 +24,13 @@ body {
     position: relative;
     height: 100vh;
 
-    background-color: var(--bg-color-dark-n-tt-color-light);
+    background-color: var(--bg-color-dark);
 
     font-family: "Roboto", sans-serif;
-    color: var(--tt-color-n-bg-light);
+    color: var(--tt-color-dark);
 }
 
-.lightAndDarkMode {
+.darkMode {
     position: absolute;
 
     border: none;
@@ -38,7 +40,7 @@ body {
     right: 3.2rem;
 
     font-size: 3.2rem;
-    color: var(--tt-color-n-bg-light);
+    color: var(--modes-dark);
 
     transition: .5s;
 }
@@ -46,6 +48,14 @@ body {
 .lightAndDarkMode:hover {
     transform: scale(1.1);
     cursor: pointer;
+}
+
+html.light-mode{
+    --bg-color-dark: #F8F8FC;
+    --bg-color-controls-dark-n-light: #242424;
+    --secondary-color: #42D3FF;
+    --tt-color-dark: #121214;
+    --modes-dark: #121214;
 }
 
 .flex {
@@ -76,7 +86,7 @@ main {
 
 .controlsPlay button {
     font-size: 6.4rem;
-    color: var(--tt-color-n-bg-light);
+    color: var(--controls-color);
 
     background: none;
     border: none;
@@ -100,4 +110,11 @@ html:not(.running) .ph-pause-circle,
 html:not(.running) .ph-stop-circle,
 html:not(.music-on) .ph-speaker-high{
     display: none;
+}
+
+html.light-mode .ph-sun,
+html:not(.light-mode) .ph-moon
+{
+    display: none;
+    transition: 1.5s;
 }
