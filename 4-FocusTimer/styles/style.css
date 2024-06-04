@@ -45,7 +45,7 @@ body {
     transition: .5s;
 }
 
-.lightAndDarkMode:hover {
+.darkMode:hover {
     transform: scale(1.1);
     cursor: pointer;
 }
