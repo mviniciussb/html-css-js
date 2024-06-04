@@ -50,7 +50,7 @@ body {
     cursor: pointer;
 }
 
-html.light-mode{
+html.light-mode {
     --bg-color-dark: #F8F8FC;
     --bg-color-controls-dark-n-light: #242424;
     --secondary-color: #42D3FF;
@@ -108,13 +108,29 @@ main {
 .music-on .ph-speaker-none,
 html:not(.running) .ph-pause-circle,
 html:not(.running) .ph-stop-circle,
-html:not(.music-on) .ph-speaker-high{
+html:not(.music-on) .ph-speaker-high {
     display: none;
 }
 
 html.light-mode .ph-sun,
-html:not(.light-mode) .ph-moon
-{
+html:not(.light-mode) .ph-moon {
     display: none;
     transition: 1.5s;
+}
+
+.lightAndDarkMode i:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
 }

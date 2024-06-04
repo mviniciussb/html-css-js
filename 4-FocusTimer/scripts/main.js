@@ -1,0 +1,1 @@
+import { darkModeFunction } from "../scripts/light-mode.js"
