@@ -30,18 +30,29 @@
 
 
         <div class="controlsPlay flex">
-            <button class="ph ph-play-circle secondary-color">
-                <span class="sr-only">Iniciar contador</span></button>
-            <button class="ph ph-pause-circle secondary-color">
-                <span class="sr-only">Pausar contador</span></button>
-            <button class="ph ph-timer">
-                <span class="sr-only">Ajustar contador</span></button>
-            <button class="ph ph-stop-circle">
-                <span class="sr-only">Reiniciar contador</span></button>
-            <button class="ph ph-speaker-none">
-                <span class="sr-only">Iniciar música</span></button>
-            <button class="ph ph-speaker-high secondary-color">
-                <span class="sr-only">Parar música</span></button>
+            <button data-action="toggleRunning" class="ph ph-play-circle secondary-color">
+                <span class="sr-only">Iniciar contador</span>
+            </button>
+
+            <button data-action="toggleRunning" class="ph ph-pause-circle secondary-color">
+                <span class="sr-only">Pausar contador</span>
+            </button>
+
+            <button data-action="stop" class="ph ph-timer">
+                <span class="sr-only">Ajustar contador</span>
+            </button>
+
+            <button data-action="reset" class="ph ph-stop-circle">
+                <span class="sr-only">Reiniciar contador</span>
+            </button>
+
+            <button data-action="toggleMusic" class="ph ph-speaker-none">
+                <span class="sr-only">Iniciar música</span>
+            </button>
+
+            <button data-action="toggleMusic" class="ph ph-speaker-high secondary-color">
+                <span class="sr-only">Parar música</span>
+            </button>
         </div>
 
     </main>
