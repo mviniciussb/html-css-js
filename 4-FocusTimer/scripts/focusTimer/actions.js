@@ -1,15 +1,15 @@
 export function toggleRunning(){
-    console.log("Toggle running function")
+    document.querySelector("html").classList.toggle("running")
 }
 
 export function set(){
-    console.log("set function")
+    // tem que trabalhar aqui ainda
 }
 
 export function reset(){
-    console.log("reset function")
+    document.querySelector("html").classList.toggle("running")
 }
 
 export function toggleMusic(){
-    console.log("Toggle music function")
+    document.querySelector("html").classList.toggle("music-on")
 }
