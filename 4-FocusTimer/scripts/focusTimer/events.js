@@ -8,7 +8,7 @@ export function registerControls() {
     controls.addEventListener("click", (event) => {
         const action = event.target.dataset.action
 
-        if(typeof actions[action] != "function"){
+        if (typeof actions[action] != "function") {
             return
         }
 
@@ -16,7 +16,7 @@ export function registerControls() {
     })
 }
 
-export function setMinutes(){
+export function setMinutes() {
     el.minutes.addEventListener("focus", () => {
         el.minutes.textContent = ""
     })

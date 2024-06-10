@@ -3,8 +3,8 @@ import { reset } from "./actions.js"
 import * as el from "./elements.js"
 import * as sounds from "./sounds.js"
 
-export function countDown(){
-    if(!state.isRunning){
+export function countDown() {
+    if (!state.isRunning) {
         return
     }
 
@@ -14,12 +14,12 @@ export function countDown(){
 
     seconds--
 
-    if(seconds < 0){
+    if (seconds < 0) {
         seconds = 59
         minutes--
     }
 
-    if(minutes <0){
+    if (minutes < 0) {
         sounds.kichenTimer.play()
         reset()
         return
@@ -27,10 +27,10 @@ export function countDown(){
 
     updateDisplay(minutes, seconds)
 
-    setTimeout(() => countDown(),1000)
+    setTimeout(() => countDown(), 1000)
 }
 
-export function updateDisplay(minutes, seconds){
+export function updateDisplay(minutes, seconds) {
     minutes = minutes ?? state.minutes
 
     seconds = seconds ?? state.seconds
