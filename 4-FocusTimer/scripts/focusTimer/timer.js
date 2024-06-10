@@ -1,6 +1,7 @@
 import state from "./state.js"
 import { reset } from "./actions.js"
 import * as el from "./elements.js"
+import * as sounds from "./sounds.js"
 
 export function countDown(){
     if(!state.isRunning){
@@ -10,6 +11,7 @@ export function countDown(){
     let minutes = Number(el.minutes.textContent)
     let seconds = Number(el.seconds.textContent)
 
+
     seconds--
 
     if(seconds < 0){
@@ -18,6 +20,7 @@ export function countDown(){
     }
 
     if(minutes <0){
+        sounds.kichenTimer.play()
         reset()
         return
     }
