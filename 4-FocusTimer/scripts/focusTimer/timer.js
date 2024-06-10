@@ -1,4 +1,5 @@
 import state from "./state.js"
+import { reset } from "./actions.js"
 import * as el from "./elements.js"
 
 export function countDown(){
@@ -6,7 +7,22 @@ export function countDown(){
         return
     }
 
-    console.log("iniciou")
+    let minutes = Number(el.minutes.textContent)
+    let seconds = Number(el.seconds.textContent)
+
+    seconds--
+
+    if(seconds < 0){
+        seconds = 59
+        minutes--
+    }
+
+    if(minutes <0){
+        reset()
+        return
+    }
+
+    updateDisplay(minutes, seconds)
 
     setTimeout(() => countDown(),1000)
 }

@@ -12,10 +12,9 @@ export function set(){
 }
 
 export function reset(){
-    state.minutes = 0
-    state.seconds = 0
     state.isRunning = false
     document.querySelector("html").classList.toggle("running")
+    timer.updateDisplay()
 }
 
 export function toggleMusic(){
