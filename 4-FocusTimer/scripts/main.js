@@ -1,4 +1,4 @@
 import { darkModeFunction } from "../scripts/light-mode.js"
-import { start } from "./focusTimer/index.js"
+import * as focusTimer from "./focusTimer/index.js"
 
-start(0, 0)
+focusTimer.start(25, 6)
