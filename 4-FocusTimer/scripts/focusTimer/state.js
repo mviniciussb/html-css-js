@@ -1,6 +1,6 @@
 export default {
-    minutes: 25,
-    seconds: 0,
+    minutesTime: 25,
+    secondsTime: 0,
     isRunning: false,
     isMute: true
 }
