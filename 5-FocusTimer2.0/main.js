@@ -1,4 +1,4 @@
-import * as eventsSounds from "./scripts/events.js"
+import * as eventsSounds from "./scripts/sounds/events.js"
 
 eventsSounds.plantSound()
 eventsSounds.cloudSound()

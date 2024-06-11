@@ -1,5 +1,4 @@
 import * as elements from "./elements.js"
-import * as sounds from "./sounds.js"
 import * as action from "./actions.js"
 
 export function plantSound() {
@@ -12,7 +11,6 @@ export function plantSound() {
 export function cloudSound() {
     elements.cloudButton.addEventListener("click", () => {
         action.cloudAction()
-
     })
 }
 
