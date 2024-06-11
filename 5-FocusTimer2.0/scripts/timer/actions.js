@@ -1,8 +1,14 @@
 import state from "./state.js"
 import * as elements from "./elements.js"
+import { countDownTime } from "./countdown.js"
 
-export function toggleRunning(){
-    // trabalhar aqui
+export function play(){
+    state.isRunning = true
+    countDownTime(state.minutes, state.seconds)
+}
+
+export function stop(){
+    state.isRunning = false
 }
 
 export function addTime(){
