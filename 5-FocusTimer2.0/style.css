@@ -69,3 +69,9 @@ span {
 
     cursor: pointer;
 }
+
+.hidenButton{
+    background-color: #02799D;
+    color: #FFF;
+}
+
