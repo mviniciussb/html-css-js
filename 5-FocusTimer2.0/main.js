@@ -1,7 +1,7 @@
 import * as eventsSounds from "./scripts/sounds/events.js"
-import * as events from "./scripts/timer/events.js"
+import * as index from "./scripts/timer/index.js"
 
-events.controlsPlay()
+index.controlsPlay()
 
 eventsSounds.plantSound()
 eventsSounds.cloudSound()
