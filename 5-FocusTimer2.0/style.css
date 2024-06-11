@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
-:root{
+:root {
     font-size: 62.5%;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,31 +13,31 @@
     font-size: 1.6rem;
 }
 
-#app{
+#app {
     height: 100vh;
     display: grid;
     place-content: center;
 }
 
-section{
+section {
     display: flex;
     gap: 19.2rem;
     align-items: center;
 }
 
-span{
+span {
     font-size: 12.6rem;
     color: #323238;
     font-weight: 500;
     text-transform: uppercase;
 }
 
-#controls{
+#controls {
     display: flex;
     justify-content: space-between;
 }
 
-#controls button{
+#controls button {
     font-size: 4.8rem;
     background: none;
     border: none;
@@ -46,20 +46,19 @@ span{
     cursor: pointer;
 }
 
-#controls button:hover{
+#controls button:hover {
     transform: scale(1.05);
 }
 
-#musicPlayer{
+#musicPlayer {
     display: flex;
     gap: 3.2rem;
 
     max-width: 30.8rem;
     flex-wrap: wrap;
-   
 }
 
-#musicPlayer button{
+#musicPlayer button {
     min-width: 13.8rem;
     min-height: 15.2rem;
 
@@ -69,9 +68,4 @@ span{
     font-size: 6rem;
 
     cursor: pointer;
-}
-
-#musicPlayer button:hover{
-    background-color: #02799D;
-    color: #FFF;
 }
