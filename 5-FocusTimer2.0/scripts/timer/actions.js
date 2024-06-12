@@ -1,22 +1,15 @@
-import state from "./state.js"
-import * as elements from "./elements.js"
-import { countDownTime } from "./countdown.js"
-
 export function play(){
-    state.isRunning = true
-    countDownTime(state.minutes, state.seconds)
+    console.log("Play function")
 }
 
-export function stop(){
-    state.isRunning = false
+export function reset(){
+    console.log("Reset function")
 }
 
 export function addTime(){
-    state.minutes += 5
-    elements.minutes.textContent = state.minutes
+    console.log("addTime function")
 }
 
 export function subTime(){
-    state.minutes -= 5
-    elements.minutes.textContent = state.minutes
+    console.log("subTime function")
 }
