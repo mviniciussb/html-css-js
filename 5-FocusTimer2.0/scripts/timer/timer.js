@@ -5,7 +5,22 @@ export function countdown(){
     if(state.isRunning == false){
         return
     }
-    console.log("iniciou")
+    
+    let minutes = Number(elements.minutes.textContent)
+    let seconds = Number(elements.seconds.textContent)
+
+    seconds--
+
+    if(seconds < 0){
+        seconds = 59
+        minutes--
+    }
+
+    if(minutes < 0){
+        return
+    }
+
+    updateDisplay(minutes, seconds)
     setTimeout(() => countdown(), 1000);
 }
 
