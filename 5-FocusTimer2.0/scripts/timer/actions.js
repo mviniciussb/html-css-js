@@ -12,13 +12,16 @@ export function reset() {
     timer.updateDisplay()
 }
 
-export function addTime() {
-
-    if(state.isRunning == true){
-        
+export function addTime(){
+    if(state.isRunning == false){
+        state.minutes += 5
+        timer.updateDisplay()
     }
 }
 
 export function subTime() {
-   
+    if(state.isRunning == false){
+        state.minutes -= 5
+        timer.updateDisplay()
+    }
 }
