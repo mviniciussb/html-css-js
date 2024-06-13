@@ -1,4 +1,6 @@
-import * as events from "./scripts/timer/events.js"
+import {  playSound } from "./scripts/sounds/index.js"
 
 
-events.getInformationClick()
+playSound()
+
+
