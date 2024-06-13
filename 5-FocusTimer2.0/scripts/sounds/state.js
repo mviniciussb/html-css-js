@@ -1,4 +1,4 @@
-export default{
+export default {
     isMutePlant: true,
     isMuteCloud: true,
     isMuteCoffee: true,
