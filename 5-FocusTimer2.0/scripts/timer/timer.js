@@ -1,9 +1,8 @@
 import state from "./state.js"
 import * as elements from "./elements.js"
-import { reset } from "./actions.js"
+import * as actions from "./actions.js"
 
 export function countdown(){
-
     clearTimeout(state.countdownId)
 
     if(state.isRunning == false){
@@ -21,7 +20,7 @@ export function countdown(){
     }
 
     if(minutes < 0){
-        reset()
+        actions.reset()
         return
     }
 

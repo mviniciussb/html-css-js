@@ -14,6 +14,9 @@ export function reset() {
 
 export function addTime() {
 
+    if(state.isRunning == true){
+        
+    }
 }
 
 export function subTime() {
