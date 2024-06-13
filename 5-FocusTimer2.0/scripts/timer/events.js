@@ -6,11 +6,11 @@ export function registerControls(event) {
     elements.controls.addEventListener("click", (event) => {
         const action = event.target.dataset.action
 
-        if (action == undefined) {
+        if (typeof actions[action] != "function") {
             return
         }
 
-        console.log(actions["play"]())
+        actions[action]()
     })
 
 }

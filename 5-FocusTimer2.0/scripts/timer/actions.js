@@ -1,15 +1,25 @@
-export function play(){
-    console.log("play function")
+import state from "./state.js"
+import * as timer from "./timer.js"
+
+export function play() {
+    state.isRunning = true
+    timer.countdown()
 }
 
-export function reset(){
-    console.log("reset function")
+export function reset() {
+    state.isRunning = false
+    state.minutes = 0
+    state.seconds = 0
 }
 
-export function addTime(){
-    console.log("add function")
+export function addTime() {
+    if (state.isRunning == true) {
+        state.minutes += 5
+    }
 }
 
-export function subTime(){
-    console.log("sub function")
+export function subTime() {
+    if (state.isRunning == true) {
+        state.minutes -= 5
+    }
 }
