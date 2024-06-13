@@ -1,6 +1,5 @@
 import state from "./state.js"
 import * as timer from "./timer.js"
-import * as elements from "./elements.js"
 
 export function play() {
     state.isRunning = true
@@ -12,15 +11,15 @@ export function reset() {
     timer.updateDisplay()
 }
 
-export function addTime(){
-    if(state.isRunning == false){
+export function addTime() {
+    if (state.isRunning == false) {
         state.minutes += 5
         timer.updateDisplay()
     }
 }
 
 export function subTime() {
-    if(state.isRunning == false){
+    if (state.isRunning == false) {
         state.minutes -= 5
         timer.updateDisplay()
     }

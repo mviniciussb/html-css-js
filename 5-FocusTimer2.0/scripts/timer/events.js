@@ -1,6 +1,5 @@
 import * as elements from "./elements.js"
 import * as actions from "./actions.js"
-import state from "./state.js"
 
 export function registerControls(event) {
 
