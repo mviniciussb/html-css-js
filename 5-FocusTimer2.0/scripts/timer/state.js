@@ -1,5 +1,6 @@
 export default {
-    minutes: 0,
+    minutes: 8,
     seconds: 0,
-    isRunning: false
+    isRunning: false,
+    countdownId: null
 }

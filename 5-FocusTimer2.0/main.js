@@ -3,4 +3,4 @@ import * as start from "./scripts/timer/index.js"
 
 
 playSound()
-start.timer(0, 0)
+start.timer(25,0)

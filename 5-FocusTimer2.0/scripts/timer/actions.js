@@ -9,7 +9,7 @@ export function play() {
 
 export function reset() {
     state.isRunning = false
-    timer.updateDisplay(0, 0)
+    timer.updateDisplay()
 }
 
 export function addTime() {
