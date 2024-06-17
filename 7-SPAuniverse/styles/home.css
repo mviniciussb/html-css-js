@@ -1,0 +1,36 @@
+body {
+    height: 85vh;
+    background-image: url("../assets/mountains-universe-1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    align-content: center;
+    text-align: center;
+}
+
+button {
+    margin-top: 2.4rem;
+
+    border-radius: .5rem;
+    border: .2rem solid #FFF;
+
+    background: none;
+
+    padding: 1.2rem 3.2rem;
+
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+    text-transform: uppercase;
+    color: var(--nav-focus-color);
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+button:hover {
+    color: var(--hover-button);
+    background: #FFF;
+}
