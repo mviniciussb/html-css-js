@@ -1,10 +1,9 @@
-import { toggleScreen } from "./events.js";
+import * as events from "./events.js";
 import * as routes from "./routes.js"
 
 
 export function start() {
-    toggleScreen()
-
+    events.toggleScreen()
     routes.handle()
     window.onpopstate = () => routes.handle()
 }

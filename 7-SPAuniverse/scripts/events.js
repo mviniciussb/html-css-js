@@ -7,9 +7,6 @@ export function toggleScreen() {
     elements.home.addEventListener("click", (event) => {
         event.preventDefault()
 
-        elements.BackgroundScreen.style.backgroundImage =
-            "url('./assets/mountains-universe-1.png')"
-
         window.history.pushState({}, "", event.target.href)
         routes.handle()
     })
@@ -19,9 +16,6 @@ export function toggleScreen() {
     elements.oUniverso.addEventListener("click", (event) => {
         event.preventDefault()
 
-        elements.BackgroundScreen.style.backgroundImage =
-            "url('./assets/mountains-universe2.png')"
-
         window.history.pushState({}, "", event.target.href)
         routes.handle()
     })
@@ -30,9 +24,6 @@ export function toggleScreen() {
 
     elements.explorar.addEventListener("click", (event) => {
         event.preventDefault()
-
-        elements.BackgroundScreen.style.backgroundImage =
-            "url('./assets/mountains-universe-3.png')"
 
         window.history.pushState({}, "", event.target.href)
         routes.handle()

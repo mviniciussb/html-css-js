@@ -21,7 +21,7 @@ body{
     background-color: #020216;
     height: 100vh;
     
-    background-image: url("./assets/mountains-universe-1.png");
+    /* background-image: url("./assets/mountains-universe-1.png"); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -57,8 +57,9 @@ ul li a{
     text-decoration: none;
 }
 
-ul li:hover{
-    transform: scale(1.1);
+ul li a:focus{
+    color: var(--emphasis-color);
+    font-weight: 700;
 }
 
 h1{
@@ -112,9 +113,4 @@ h1,p {
     margin-top: 6.3rem;
     margin-left: 10.2rem;
     max-width: 64.8rem;
-}
-
-.focusOnLink{
-    color: var(--emphasis-color);
-    font-weight: 700;
 }
