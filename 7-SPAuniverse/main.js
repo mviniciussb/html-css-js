@@ -1,11 +1,12 @@
+// Variaveis - elementos
 export const home = document.querySelector("li:nth-child(1)")
 export const oUniverso = document.querySelector("li:nth-child(2)")
 export const explorar = document.querySelector("li:nth-child(3)")
 
-
+// Eventos das variaveis
 home.addEventListener("click", (event) => {
-    event = event || window.event
     event.preventDefault()
+    
     window.history.pushState({}, "", event.target.href)
     handle()
 })
@@ -13,7 +14,6 @@ home.addEventListener("click", (event) => {
 
 
 oUniverso.addEventListener("click", (event) => {
-    event = event || window.event
     event.preventDefault()
 
     window.history.pushState({}, "", event.target.href)
@@ -23,7 +23,6 @@ oUniverso.addEventListener("click", (event) => {
 
 
 explorar.addEventListener("click", (event) => {
-    event = event || window.event
     event.preventDefault()
     
     window.history.pushState({}, "", event.target.href)
@@ -32,7 +31,7 @@ explorar.addEventListener("click", (event) => {
 
 
 
-
+// Tratamentos de rotas
 const routes = {
     "/": "../pages/home.html",
     "/ouniverso": "../pages/universo.html",
@@ -42,4 +41,14 @@ const routes = {
 
 function handle() {
     const {pathname} = window.location
+    const route = routes[pathname] || routes[404]
+
+    fetch(route)
+    .then(data => data.text())
+    .then(html => {
+        document.querySelector("#app").innerHTML = html
+    })
 }
+
+handle()
+window.onpopstate = () => handle()
