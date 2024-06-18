@@ -19,7 +19,6 @@ export function toggleScreen() {
     elements.oUniverso.addEventListener("click", (event) => {
         event.preventDefault()
 
-
         elements.BackgroundScreen.style.backgroundImage =
             "url('./assets/mountains-universe2.png')"
 
@@ -31,7 +30,6 @@ export function toggleScreen() {
 
     elements.explorar.addEventListener("click", (event) => {
         event.preventDefault()
-
 
         elements.BackgroundScreen.style.backgroundImage =
             "url('./assets/mountains-universe-3.png')"

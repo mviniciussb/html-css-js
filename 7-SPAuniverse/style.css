@@ -93,7 +93,7 @@ button:hover{
 
 p{
     font-size: 1.8rem;
-
+    line-height: 160%;
     margin-top: 1.6rem;
 }
 
@@ -112,4 +112,9 @@ h1,p {
     margin-top: 6.3rem;
     margin-left: 10.2rem;
     max-width: 64.8rem;
+}
+
+.focusOnLink{
+    color: var(--emphasis-color);
+    font-weight: 700;
 }
