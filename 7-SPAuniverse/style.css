@@ -18,10 +18,10 @@
 }
 
 body{
-    background-color: rgb(2, 2, 22);
+    background-color: #020216;
     height: 100vh;
     
-    /* background-image: url("./assets/mountains-universe-1.png"); */
+    background-image: url("./assets/mountains-universe-1.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
