@@ -21,7 +21,6 @@ body{
     background-color: #020216;
     height: 100vh;
     
-    /* background-image: url("./assets/mountains-universe-1.png"); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -113,4 +112,14 @@ h1,p {
     margin-top: 6.3rem;
     margin-left: 10.2rem;
     max-width: 64.8rem;
+}
+
+#error{
+    text-align: center;
+    margin-top: 8%;
+}
+
+#error figure img{
+    padding-top: 3rem;
+    max-width: 15rem;
 }
