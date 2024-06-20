@@ -37,7 +37,6 @@ body {
 
 body * {
     font-family: var(--ff-primary);
-
 }
 
 button {
@@ -110,35 +109,35 @@ table th:first-child {
     border-top-left-radius: .4rem;
 }
 
-table th:last-child{
+table th:last-child {
     border-top-right-radius: .4rem;
 }
 
-table tr:nth-child(odd){
+table tr:nth-child(odd) {
     background-color: #ddd;
 }
 
-table tr:nth-child(even){
+table tr:nth-child(even) {
     background-color: #eee;
 }
 
-table td{
+table td {
     padding: 1.5rem;
     text-align: left;
 }
 
-table td.user{
+table td.user {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-table td.user a{
+table td.user a {
     text-decoration: none;
 
 }
 
-table td.user a p{
+table td.user a p {
     font-weight: bold;
 }
 
@@ -149,15 +148,15 @@ td.user img {
     border-radius: 50%;
 }
 
-td .remove{
+td .remove {
     background: none;
     border: none;
     color: red;
 
     cursor: pointer;
-    
+
 }
 
-td .remove:hover{
+td .remove:hover {
     transform: scale(1.5);
 }
