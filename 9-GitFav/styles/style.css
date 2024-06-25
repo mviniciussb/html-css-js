@@ -12,7 +12,7 @@
     --text-button-color: #FFFFFF;
     --placeholder: #7C7C8A;
     --table-header: #092D38;
-
+    --scroll-color: #4A808C;
 }
 
 *{
@@ -138,6 +138,11 @@ header form button:focus{
 
 /* SECTION */
 
+section{
+    overflow: auto;
+    max-height: 360px;
+}
+
 table{
     width: 100%;
     border-collapse: collapse;
@@ -162,7 +167,23 @@ table td{
 
 thead{
     background: var(--table-header);
-    
+    position: sticky;
+    top: 0; 
+    z-index: 1;
+}
+
+/* Custom scrollbar */
+section::-webkit-scrollbar {
+    width: .5rem;
+    height: 12.2rem; /* Width of the scrollbar */
+}
+section::-webkit-scrollbar-track {
+    background: none; /* Background of the scrollbar track */
+}
+section::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-color); /* Color of the scrollbar thumb */
+    border-radius: 1rem; /* Roundness of the scrollbar thumb */
+    border: none; /* Border around the scrollbar thumb */
 }
 
 thead th{
