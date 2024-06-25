@@ -13,6 +13,7 @@
     --placeholder: #7C7C8A;
     --table-header: #092D38;
     --scroll-color: #4A808C;
+    --no-favoriotes: #4E5455;;
 }
 
 *{
@@ -23,6 +24,22 @@
 
     font-family: "Roboto", sans-serif;
     font-size: 1.6rem;
+}
+
+
+
+/* Custom scrollbar */
+tbody::-webkit-scrollbar {
+    width: .5rem;
+    height: 12.2rem; /* Width of the scrollbar */
+}
+tbody::-webkit-scrollbar-track {
+    background: none; /* Background of the scrollbar track */
+}
+tbody::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-color); /* Color of the scrollbar thumb */
+    border-radius: 1rem; /* Roundness of the scrollbar thumb */
+    border: none; /* Border around the scrollbar thumb */
 }
 
 .sr-only{
@@ -57,6 +74,10 @@ body{
 
     width: 112rem;
 }
+
+
+
+
 
 /* HEADER */
 
@@ -124,14 +145,6 @@ header form button:hover .button-star{
     fill: #065E7C;
 }
 
-header form input:focus{
-    outline: .2rem solid var(--table-header);
-}
-
-header form button:focus{
-    outline: .2rem solid #1b86a6;
-}
-
 
 
 
@@ -139,18 +152,13 @@ header form button:focus{
 /* SECTION */
 
 section{
-    overflow: auto;
-    max-height: 360px;
+    overflow: hidden;
+    border-radius: 1.2rem;
 }
 
 table{
     width: 100%;
     border-collapse: collapse;
-}
-
-table p, table a, table span, table td{
-    font-size: 2rem;
-    line-height: 160%;
 }
 
 table tbody tr:nth-child(odd){
@@ -161,8 +169,19 @@ table tbody tr:nth-child(even){
     background-color: var(--even-row);
 }
 
+table p, table a, table span, table td{
+    font-size: 1.9rem;
+    line-height: 160%;
+}
+
 table td{
     padding: 2.4rem 2.4rem 2.4rem 4rem;
+}
+
+thead, tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
 }
 
 thead{
@@ -172,41 +191,22 @@ thead{
     z-index: 1;
 }
 
-/* Custom scrollbar */
-section::-webkit-scrollbar {
-    width: .5rem;
-    height: 12.2rem; /* Width of the scrollbar */
-}
-section::-webkit-scrollbar-track {
-    background: none; /* Background of the scrollbar track */
-}
-section::-webkit-scrollbar-thumb {
-    background-color: var(--scroll-color); /* Color of the scrollbar thumb */
-    border-radius: 1rem; /* Roundness of the scrollbar thumb */
-    border: none; /* Border around the scrollbar thumb */
-}
-
 thead th{
     padding: 1.6rem 2.4rem 1.6rem 4rem;
     text-align: left;
 }
 
-
-
-
-thead th:first-child{
-    border-top-left-radius: 1.2rem;
+tbody{
+    display: block;
+    max-height: 35rem;
+    overflow-y: auto;
 }
 
-thead th:last-child{
-    border-top-right-radius: 1.2rem;
+tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
 }
-
-tr:last-child td:last-child{
-    border-bottom-right-radius: 1.2rem;
-}
-
-
 
 .user{
     display: flex;
