@@ -29,15 +29,16 @@
 
 
 /* Custom scrollbar */
-tbody::-webkit-scrollbar {
+body::-webkit-scrollbar {
     width: .5rem;
     height: 12.2rem; /* Width of the scrollbar */
 }
-tbody::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track {
     background: none; /* Background of the scrollbar track */
 }
-tbody::-webkit-scrollbar-thumb {
-    background-color: var(--scroll-color); /* Color of the scrollbar thumb */
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--table-header); /* Color of the scrollbar thumb */
     border-radius: 1rem; /* Roundness of the scrollbar thumb */
     border: none; /* Border around the scrollbar thumb */
 }
@@ -60,9 +61,7 @@ body{
     background: var(--bg-color);
     color: var(--principal-text-color);
 
-    overflow-y: hidden;
 
-    height: 100vh;
 
     margin: 11.5rem 0;
 }
@@ -151,14 +150,12 @@ header form button:hover .button-star{
 
 /* SECTION */
 
-section{
-    overflow: hidden;
-    border-radius: 1.2rem;
-}
 
 table{
     width: 100%;
     border-collapse: collapse;
+    border-radius: 1.2rem;
+    overflow: hidden;
 }
 
 table tbody tr:nth-child(odd){
@@ -178,34 +175,13 @@ table td{
     padding: 2.4rem 2.4rem 2.4rem 4rem;
 }
 
-thead, tbody tr {
-    display: table;
-    width: 100%;
-    table-layout: fixed;
-}
-
 thead{
     background: var(--table-header);
-    position: sticky;
-    top: 0; 
-    z-index: 1;
 }
 
 thead th{
     padding: 1.6rem 2.4rem 1.6rem 4rem;
     text-align: left;
-}
-
-tbody{
-    display: block;
-    max-height: 35rem;
-    overflow-y: auto;
-}
-
-tbody tr {
-    display: table;
-    width: 100%;
-    table-layout: fixed;
 }
 
 .user{
