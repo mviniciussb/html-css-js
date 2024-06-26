@@ -62,7 +62,7 @@ body{
     color: var(--principal-text-color);
 
 
-
+    padding: 0 5rem;
     margin: 11.5rem 0;
 }
 
@@ -86,12 +86,12 @@ header{
     align-items: flex-end;
 }
 
-header form{
+.search{
     display: flex;
     gap: .8rem;
 }
 
-header form input[type = "text"]{
+.search input[type = "text"]{
     background: var(--even-row);
     padding: 1.6rem;
 
@@ -104,11 +104,11 @@ header form input[type = "text"]{
     color: var(--principal-text-color);
 }
 
-header form input[type = "text"]::placeholder{
+.search input[type = "text"]::placeholder{
     color: var(--placeholder);
 }
 
-header form button{
+.search button{
     display: flex;
     gap: .8rem;
     align-items: center;
@@ -137,8 +137,8 @@ header form button{
 }
 
 
-header form button:hover,
-header form button:hover .button-star{
+.search button:hover,
+.search button:hover .button-star{
     --button-color:#FFF;
     --text-button-color: #065E7C;
     fill: #065E7C;
@@ -166,7 +166,7 @@ table tbody tr:nth-child(even){
     background-color: var(--even-row);
 }
 
-table p, table a, table span, table td{
+table p, table a, table span, table td, .remove button{
     font-size: 1.9rem;
     line-height: 160%;
 }
@@ -204,10 +204,11 @@ thead th{
     font-weight: 700;
 }
 
-.remove a{
+.remove{
     color: var(--remove-color);
+    background: none;
 
-    text-decoration: none;
+    border: none;
 
     cursor: pointer;
 }
