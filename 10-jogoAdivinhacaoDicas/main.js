@@ -10,6 +10,9 @@ var campoPalpite = document.querySelector(".campoPalpite");
 var contagemPalpites = 1;
 var botaoReinicio;
 
+campoPalpite.focus();
+
+
 function conferirPalpite() {
     var palpiteUsuario = Number(campoPalpite.value);
     if (contagemPalpites === 1) {
@@ -40,3 +43,36 @@ function conferirPalpite() {
     campoPalpite.value = "";
     campoPalpite.focus();
 }
+
+envioPalpite.addEventListener("click", conferirPalpite);
+
+function configFimDeJogo() {
+    campoPalpite.disabled = true;
+    envioPalpite.disabled = true;
+    botaoReinicio = document.createElement("button");
+    botaoReinicio.textContent = "Iniciar novo jogo";
+    document.body.appendChild(botaoReinicio);
+    botaoReinicio.addEventListener("click", reiniciarJogo);
+  }
+
+  
+  function reiniciarJogo() {
+    contagemPalpites = 1;
+  
+    var reiniciarParas = document.querySelectorAll(".resultadoParas p");
+    for (var i = 0; i < reiniciarParas.length; i++) {
+      reiniciarParas[i].textContent = "";
+    }
+  
+    botaoReinicio.parentNode.removeChild(botaoReinicio);
+  
+    campoPalpite.disabled = false;
+    envioPalpite.disabled = false;
+    campoPalpite.value = "";
+    campoPalpite.focus();
+  
+    ultimoResultado.style.backgroundColor = "white";
+  
+    numeroAleatorio = Math.floor(Math.random() * 100) + 1;
+  }
+  
