@@ -7,6 +7,12 @@ const routes = {
 
 
 const links = document.querySelectorAll("a")
+const main = document.querySelector("main")
+main.innerHTML = `
+    <h1>Inicio</h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia animi nulla quis aliquid minus iusto, non enim! Error at voluptas eaque libero totam eos delectus atque, aut architecto quidem veritatis!</p>
+    `
 
 links.forEach((link) => {
     link.addEventListener("click", (evt) => {
@@ -14,13 +20,13 @@ links.forEach((link) => {
 
         window.history.pushState({}, "", evt.target.href)
         let pathname = window.location.pathname
-        
+
         let route = routes[pathname] || routes[404]
 
         fetch(route).then(dado => dado.text()).then(dadoText => {
-            document.querySelector("main").innerHTML = dadoText
+            main.innerHTML = dadoText
         })
-     })
+    })
 })
 
 
