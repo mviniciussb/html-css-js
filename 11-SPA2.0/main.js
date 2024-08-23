@@ -18,16 +18,25 @@ links.forEach((link) => {
     link.addEventListener("click", (evt) => {
         evt.preventDefault()
 
-        window.history.pushState({}, "", evt.target.href)
-        let pathname = window.location.pathname
+        const url = evt.target.href
 
-        let route = routes[pathname] || routes[404]
+        window.history.pushState({}, "", url)
 
-        fetch(route).then(dado => dado.text()).then(dadoText => {
-            main.innerHTML = dadoText
-        })
+        loadContent(window.location.pathname)
     })
 })
+
+function loadContent(url) {
+    
+    let route = routes[url] || routes["/404"]
+    fetch(route).then(dado => dado.text()).then(dadoText => {
+        main.innerHTML = dadoText
+    })
+}
+
+
+window.onpopstate =  () => loadContent(window.location.pathname)
+
 
 
 
